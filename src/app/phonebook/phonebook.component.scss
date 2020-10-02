@@ -1,0 +1,29 @@
+.container {
+    .enter-data {
+        display: flex;
+        .enter-data-input {
+            padding: 3px;
+            margin: 5px;
+        }
+    }
+    .phonebook {
+        width: 100%;
+        .phonebook-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+            border: 2px solid green;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: rgb(185, 228, 185);
+            margin: 10px;
+            .phonebook-contact-delete {
+                background-image: url(../../assets/icon-delete.png);
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

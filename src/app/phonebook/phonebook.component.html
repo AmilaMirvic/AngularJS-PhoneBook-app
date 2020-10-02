@@ -1,0 +1,23 @@
+<!--Component for entering names and phone numbers-->
+
+<div class="container">
+    <div class="enter-data">
+        <div class="enter-data-input">
+            <label for="name">Enter contact name:</label>
+            <br>
+            <input id="name" type="text" placeholder="Name...">
+        </div>
+        <div class="enter-data-input">
+            <label for="phone">Enter phone number:</label>
+            <br>
+            <input id="phone" type="phone" placeholder="+387 65 123 456">
+        </div>
+    </div>
+    <div class="phonebook">
+        <div class="phonebook-contact" *ngFor="let contact of phonebook">
+            <div>{{ contact.name }}</div>
+            <div>{{ contact.phone }}</div>
+            <div class="phonebook-contact-delete"></div>
+        </div>
+    </div>
+</div>
