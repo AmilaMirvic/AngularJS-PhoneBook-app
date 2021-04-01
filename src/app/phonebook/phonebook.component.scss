@@ -1,29 +1,68 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
     .enter-data {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px;
         .enter-data-input {
             padding: 3px;
             margin: 5px;
+            label {
+                padding: 15px 0px;
+            }
+            input {
+                padding: 10px 5px;
+                border-radius: 5px;
+                border: 2px solid rgb(50, 141, 50);
+            }
+        }
+        button {
+            background-color: rgb(154, 219, 154);
+            padding: 10px;
+            border-radius: 5px;
+            width: 105px;
+        }
+        button:disabled,
+        button[disabled]{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
         }
     }
     .phonebook {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: space-between;
+        align-items: center;
         .phonebook-contact {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 40%;
-            border: 2px solid green;
+            width: 100%;
+            border: 2px solid rgb(50, 141, 50);
             border-radius: 5px;
             padding: 5px;
-            background-color: rgb(185, 228, 185);
+            background-color: rgb(202, 231, 202);
             margin: 10px;
             .phonebook-contact-delete {
-                background-image: url(../../assets/icon-delete.png);
+                background-image: url(../../assets/icon-delete-light.png);
                 background-repeat: no-repeat;
                 width: 40px;
                 height: 40px;
             }
+            .phonebook-contact-delete:hover {
+                background-image: url(../../assets/icon-delete.png);
+            }
+        }
+        .phonebook-contact:hover {
+            border: 2px solid green;
+            background-color: rgb(154, 219, 154);
         }
     }
 }

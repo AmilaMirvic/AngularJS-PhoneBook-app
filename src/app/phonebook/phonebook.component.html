@@ -5,19 +5,20 @@
         <div class="enter-data-input">
             <label for="name">Enter contact name:</label>
             <br>
-            <input id="name" type="text" placeholder="Name...">
+            <input id="name" type="text" placeholder="Name..." [(ngModel)]="name">
         </div>
         <div class="enter-data-input">
             <label for="phone">Enter phone number:</label>
             <br>
-            <input id="phone" type="phone" placeholder="+387 65 123 456">
+            <input id="phone" type="phone" placeholder="+387 65 123 456" [(ngModel)]="phone">
         </div>
+        <button (click)="saveContact()">Add contact</button>
     </div>
     <div class="phonebook">
         <div class="phonebook-contact" *ngFor="let contact of phonebook">
             <div>{{ contact.name }}</div>
             <div>{{ contact.phone }}</div>
-            <div class="phonebook-contact-delete"></div>
+            <div class="phonebook-contact-delete" (click)="deleteFromLocalStorage(contact)"></div>
         </div>
     </div>
 </div>
